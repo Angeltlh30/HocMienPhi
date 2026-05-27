@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTNET-hocmienphi.api", "DO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTNET-hocmienphi.service", "DOTNET-hocmienphi.service\DOTNET-hocmienphi.service.csproj", "{6344E4DF-1645-45B8-B4E7-24ED2689CA73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTNET0-hocmienphi.repository", "DOTNET0-hocmienphi.repository\DOTNET0-hocmienphi.repository.csproj", "{25EB845D-2450-40A4-B589-A7566583EAF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTNET-hocmienphi.repository", "DOTNET-hocmienphi.repository\DOTNET-hocmienphi.repository.csproj", "{25EB845D-2450-40A4-B589-A7566583EAF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

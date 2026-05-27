@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DOTNET0-hocmienphi.repository\DOTNET0-hocmienphi.repository.csproj" />
+      <ProjectReference Include="..\DOTNET-hocmienphi.repository\DOTNET-hocmienphi.repository.csproj" />
     </ItemGroup>
 
 </Project>
