@@ -91,6 +91,7 @@ app.Run();
 
     // Khi duyệt đơn, thì Admin có thể chọn duyệt hoặc từ chối
     // Nếu từ chối thì phải có lý do từ chối
+    // Khi ma duyet don xong thi role phai duoc doi
     // Khi duyệt đơn, thì hệ thống phải thông báo cho User về kết quả của đơn apply đó
 
 

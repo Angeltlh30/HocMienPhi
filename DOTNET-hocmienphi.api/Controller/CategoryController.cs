@@ -32,9 +32,9 @@ public class CategoryController : ControllerBase
         query = query.OrderBy(x => x.Name);
 
         var selectedQuery = query
-            .Select(x => new Response.GetCategoryResponse()
+            .Select(x => new Response.GetAllParentCategoryResponse()
         {
-            Id = x.Id.ToString(),
+            Id = x.Id,
             Name = x.Name
         }).ToList();
         //Purpose of create GetAllParentCategoryResponse:
@@ -55,9 +55,9 @@ public class CategoryController : ControllerBase
         query = query.Where(x => x.ParentId != null & x.ParentId == id);
         query = query.OrderBy(x => x.Name);
         var selectedQuery = query
-            .Select(x => new Response.GetCategoryResponse()
+            .Select(x => new Response.GetAllParentCategoryResponse()
             {
-                Id = x.Id.ToString(),
+                Id = x.Id,
                 Name = x.Name
             }).ToList();
         var result = selectedQuery.ToList();
