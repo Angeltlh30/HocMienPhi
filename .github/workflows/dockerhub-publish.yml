@@ -35,4 +35,4 @@ jobs:
 
       - name: Trigger Render Deploy
         if: success()
-        run: curl -f "${{ secrets.RENDER_DEPLOY_HOOK }}"
+        run: curl -f "${{ secrets.RENDER_DEPLOY_HOOK_URL}}"
