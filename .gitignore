@@ -389,3 +389,4 @@ $RECYCLE.BIN/
 
 DOTNET-hocmienphi.api/appsettings.Development.json
 DOTNET-hocmienphi.api/appsettings.json
+.env

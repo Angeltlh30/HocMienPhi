@@ -2,12 +2,18 @@ using DOTNET_hocmienphi.api.Extensions;
 using DOTNET_hocmienphi.api.Middlewares;
 using DOTNET_hocmienphi.repository;
 using DOTNET_hocmienphi.service.Utils.JWTService;
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using UserService = DOTNET_hocmienphi.service.UserService;
 using MailService = DOTNET_hocmienphi.service.Utils.Mail;
 using CloudinaryService = DOTNET_hocmienphi.service.Utils.CloudinaryService;
 using MediaService = DOTNET_hocmienphi.service.Utils.MediaService;
+
+Env.Load();
+var aspnetCoreEnv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", aspnetCoreEnv);
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
