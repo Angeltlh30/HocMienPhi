@@ -1,7 +1,9 @@
+using DOTNET_hocmienphi.api.Extensions;
 using DOTNET_hocmienphi.repository;
 using DOTNET_hocmienphi.repository.entity;
 using DOTNET_hocmienphi.repository.enums;
 using DOTNET_hocmienphi.service.ApplyRequestService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Response = DOTNET_hocmienphi.service.ApplyRequestService.Response;
@@ -13,7 +15,6 @@ namespace DOTNET_hocmienphi.api.Controller;
 public class ApplyRequestController : ControllerBase
 {
     private readonly AppDbContext _dbContext; //presented of DB: AppDBContext
-
     public ApplyRequestController(AppDbContext dbContext)
     {
         _dbContext = dbContext; //inject DBContext vào trong controller để có thể thao tác với DB
@@ -38,6 +39,7 @@ public class ApplyRequestController : ControllerBase
         //Kh -> thì th
     //Sau khi Controller đủ đồ chơi r, có Input và Output r
         //Implement logic xử lý bên trong
+        
     [HttpPost("")]
     public IActionResult CreateApplyRequest(
         Request.CreateApplyRequestRequest requestBody
@@ -77,6 +79,7 @@ public class ApplyRequestCategory : BaseEntity<Guid>
     // o bẳng ApplyRequestCategory
     //Vậy nên mih phải an xạ ừ list requestBody.CategoryIds sang list ApplyRequestCategory
 //Ánh xạ data : Select
+
         var applyRequestCategories = requestBody.CategoryIds.Select(
             x => new ApplyRequestCategory() //thể hiện mentor(request) có thể giảng dạy ở phân loại ầo
         {
@@ -89,6 +92,8 @@ public class ApplyRequestCategory : BaseEntity<Guid>
         return Ok("Create");
     } 
     
+   
+    [Authorize(Policy = JwtExtensions.AdminPolicy)]
     [HttpGet("")]
     public IActionResult GetAllApplyRequest(string? searchTerm = null, ApplyRequestStatus? status = null, 
                                             DateTimeOffset? fromDate = null,
@@ -154,10 +159,22 @@ public class ApplyRequestCategory : BaseEntity<Guid>
         return Ok(result); 
     } 
     
+    //Apply authorization theo policy là AdminPolicy
+    //Khi mà da Authenticate và Authorize thì có nghĩ là
+    //Bạn là user trong hệ thống của chúng tôi
+    //và bạn có quyền Admin để thực hiện hành động này
+    //V hệ tống đã biết cta là ai rô nên có thể lược b và kh cần truyền những field kh cần thiết vidu: guid userID
+    //V thì hệ thống biết ng là ai, userID, email, firstName, lastName
+    //Vì cta đã ghi những thông tin vào Payload (ở login)
+    [Authorize(Policy = JwtExtensions.MentorPolicy)]
     [HttpGet("me")]
-    public IActionResult GetMyApplyRequest(Guid userId, ApplyRequestStatus? status = null, 
+    public IActionResult GetMyApplyRequest(ApplyRequestStatus? status = null, 
                                             int pageIndex = 1, int pageSize = 10)
     {
+        var userIdString = HttpContext.User.Claims.FirstOrDefault(
+            x => x.Type.Equals("userId"))!.Value;
+        
+        var userId = Guid.Parse(userIdString);
         var query = _dbContext.ApplyRequests.Where(
             x => x.IsDeleted == false);
         query = query.Where(x => x.UserId == userId);
@@ -235,7 +252,9 @@ public class ApplyRequestCategory : BaseEntity<Guid>
         query = query.Where(x => x.Id == id);
         
         //Include: mỗi đứa lấy lên nhớ đính kèm User (join)
-        query = query.Include(x => x.User);
+        query = query
+            .Include(x => x.User)
+            .Include(x => x.ApplyRequestCategories);
         
         var applyRequest = query.FirstOrDefault();  
         if (applyRequest == null)
@@ -251,7 +270,23 @@ public class ApplyRequestCategory : BaseEntity<Guid>
             //Auto join chỉ hđ khi mình sd Select thôi
             //Còn ở đây nếu mà muốn chấm ra User xài ngon ơ thì mình phải sd 
                 //Include để join thủ công
-            
+                var mentor = new Mentor()
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = applyRequest.UserId,
+                };
+                _dbContext.Mentors.Add(mentor);
+                _dbContext.SaveChanges();
+                
+                var mentorCategories = applyRequest.ApplyRequestCategories.Select(
+                    x => new MentorCategory()
+                    {
+                        Id = Guid.NewGuid(),
+                        MentorId = mentor.Id,
+                        CategoryId = x.CategoryId
+                    });
+                _dbContext.MentorCategories.AddRange(mentorCategories);
+                _dbContext.SaveChanges();
         }
         else
         {

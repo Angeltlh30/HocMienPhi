@@ -1,7 +1,13 @@
+using DOTNET_hocmienphi.api.Extensions;
+using DOTNET_hocmienphi.api.Middlewares;
 using DOTNET_hocmienphi.repository;
+using DOTNET_hocmienphi.service.Utils.JWTService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-
+using UserService = DOTNET_hocmienphi.service.UserService;
+using MailService = DOTNET_hocmienphi.service.Utils.Mail;
+using CloudinaryService = DOTNET_hocmienphi.service.Utils.CloudinaryService;
+using MediaService = DOTNET_hocmienphi.service.Utils.MediaService;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -16,16 +22,31 @@ builder.Services.AddDbContext<AppDbContext>(
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
+builder.Services.AddJwtServices(builder.Configuration);
+builder.Services.AddSwaggerServices();
 
+builder.Services.AddScoped<UserService.IService, UserService.Service>();
+builder.Services.AddScoped<MailService.IService, MailService.Service>();
+builder.Services.AddScoped<MediaService.IService, CloudinaryService.Service>();
+//middleware
+builder.Services.AddTransient<GlobalExceptionHandlerMiddleware>();
+
+//từ dòng app này trở lên trên, khai báo những đồ chơi mà mình xa
 var app = builder.Build();
 
+//từ dòng app này trở xg, apply những đo chơi vào server, quan trọng thu tự apply
 // Configure the HTTP request pipeline.
+
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
+// Đặt middleware này ở đầu tiên để bắt tất cả các exception
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // app.UseSwagger();
+    // app.UseSwaggerUI();
+    app.UseSwaggerAPI();
 }
 
+app.UseAuthentication(); //Authen trước author
 app.UseAuthorization();
 
 app.MapControllers();
@@ -63,8 +84,8 @@ app.Run();
     //Neu dc duyet, thì User đo sẽ become Mentor
     //Chi co User nào có quyen Admin thi moi dc sd APO nhu lay don he thong/phe duyet don
 
-// API:
 
+// API:
 // Tạo đơn
     // (Dành cho User)
     // POST /api/applyRequest
