@@ -254,7 +254,7 @@ public class UserController : ControllerBase
             await _dbContext.SaveChangesAsync();
         }
         
-        return Ok("Đây là User có id là " + id);
+        return Ok("User" + id);
     }
     
     [HttpPut("{id}")]
