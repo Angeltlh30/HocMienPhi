@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace DOTNET_hocmienphi.service.MediaService;
+namespace DOTNET_hocmienphi.service.Utils.MediaService;
 
 public interface IService
 {

@@ -1,4 +1,4 @@
-namespace DOTNET_hocmienphi.service.CloudinaryService;
+namespace DOTNET_hocmienphi.service.Utils.CloudinaryService;
 
 public class CloudinaryOptions
 {

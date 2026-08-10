@@ -1,6 +1,8 @@
 namespace DOTNET_hocmienphi.repository.enums;
 
-public class ApplyRequest
+public enum ApplyRequestStatus
 {
-    
+    Pending,
+    Approved,
+    Rejected
 }
