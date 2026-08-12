@@ -16,7 +16,7 @@ namespace DOTNET_hocmienphi.repository.entity
         public string Password { get; set; }
         public string Role { get; set; } //admin, mentor, student
         public string Phone { get; set; }
-        
+        public DateOnly SendDate { get; set; }
         
         //MQH 1-1
         public Mentor? Mentor { get; set; }

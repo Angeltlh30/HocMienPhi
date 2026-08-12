@@ -1,10 +1,13 @@
 using DOTNET_hocmienphi.api.Extensions;
 using DOTNET_hocmienphi.api.Middlewares;
 using DOTNET_hocmienphi.repository;
+using DOTNET_hocmienphi.repository.Migrations;
+using DOTNET_hocmienphi.service.Utils.BackgroundJob;
 using DOTNET_hocmienphi.service.Utils.JWTService;
 using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Quartz;
 using UserService = DOTNET_hocmienphi.service.UserService;
 using MailService = DOTNET_hocmienphi.service.Utils.Mail;
 using CloudinaryService = DOTNET_hocmienphi.service.Utils.CloudinaryService;
@@ -36,6 +39,29 @@ builder.Services.AddScoped<MailService.IService, MailService.Service>();
 builder.Services.AddScoped<MediaService.IService, CloudinaryService.Service>();
 //middleware
 builder.Services.AddTransient<GlobalExceptionHandlerMiddleware>();
+
+builder.Services.AddQuartz(options =>
+{
+    var sendAdvertisingJobkey = new JobKey(nameof(SendAdvertisingJob));
+    var triggerName = sendAdvertisingJobkey + "-trigger";
+    
+    options.AddJob<SendAdvertisingJob>(sendAdvertisingJobkey)
+        .AddTrigger(trigger => trigger
+            .ForJob(sendAdvertisingJobkey)
+            .WithIdentity(triggerName)
+            .WithCronSchedule("0 0 7 * * ?", cronBuilder => 
+                cronBuilder.InTimeZone(TimeZoneUtils.GetVietNamTimeZone())
+                )    //7g sáng every day theo giờ server
+            // giây phút giờ ngày tháng \ ngày trong tuần
+            // value: số, *(Mọi ngày, mọi tháng, lap lại), ?
+        );
+});
+
+builder.Services.AddQuartzHostedService(options =>
+{
+    options.WaitForJobsToComplete = true;
+    //chạy xong job thì mới đc shutdown app
+});
 
 //từ dòng app này trở lên trên, khai báo những đồ chơi mà mình xa
 var app = builder.Build();

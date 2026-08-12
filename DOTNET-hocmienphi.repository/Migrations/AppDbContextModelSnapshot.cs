@@ -253,6 +253,9 @@ namespace DOTNET_hocmienphi.repository.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<DateOnly>("SendDate")
+                        .HasColumnType("date");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
@@ -263,7 +266,7 @@ namespace DOTNET_hocmienphi.repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7a55bd61-76b8-48ae-b313-b6dc66ca01f0"),
+                            Id = new Guid("69211a23-8ed0-4fdf-9618-c5c60b486546"),
                             Age = "10",
                             Email = "Email0@gmail.com",
                             FirstName = "FirstName0",
@@ -271,11 +274,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName0",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("f7b6fdd1-82de-4970-a42a-1da37ea82759"),
+                            Id = new Guid("d8063a74-ca95-4106-be33-87c707703057"),
                             Age = "10",
                             Email = "Email1@gmail.com",
                             FirstName = "FirstName1",
@@ -283,11 +287,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName1",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("faebe303-eed5-43a3-89ff-337f4dde5ee3"),
+                            Id = new Guid("dd46fcfb-d126-4fa9-83a0-2d16be72a5c5"),
                             Age = "10",
                             Email = "Email2@gmail.com",
                             FirstName = "FirstName2",
@@ -295,11 +300,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName2",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("e97f6d54-0dfb-46d5-be19-6da103b6b89c"),
+                            Id = new Guid("6864d98b-5fc8-4395-8305-23fcbd0718e3"),
                             Age = "10",
                             Email = "Email3@gmail.com",
                             FirstName = "FirstName3",
@@ -307,11 +313,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName3",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("49527071-75ae-47ed-b8ca-336361f4b1b1"),
+                            Id = new Guid("382573d3-eedb-46c7-9856-a633818ef08b"),
                             Age = "10",
                             Email = "Email4@gmail.com",
                             FirstName = "FirstName4",
@@ -319,11 +326,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName4",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("252b29b4-85a9-456d-b2f8-2b78fd1efbe1"),
+                            Id = new Guid("a0ebc528-15ea-4b46-a60e-a6f6949f407a"),
                             Age = "10",
                             Email = "Email5@gmail.com",
                             FirstName = "FirstName5",
@@ -331,11 +339,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName5",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a963372d-06a9-49c2-ae0b-26370636bbcc"),
+                            Id = new Guid("349dcf24-60a7-47f4-b1d4-9b5c882fec6f"),
                             Age = "10",
                             Email = "Email6@gmail.com",
                             FirstName = "FirstName6",
@@ -343,11 +352,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName6",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("bf159065-8a5c-4e47-8ff8-ad8d895b1e34"),
+                            Id = new Guid("2127210b-a00a-4fc2-8c38-25a231748266"),
                             Age = "10",
                             Email = "Email7@gmail.com",
                             FirstName = "FirstName7",
@@ -355,11 +365,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName7",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("d8632cbc-576b-4cf9-8165-d07a52764d7b"),
+                            Id = new Guid("73215213-b272-48ad-a1f3-486aedd2561a"),
                             Age = "10",
                             Email = "Email8@gmail.com",
                             FirstName = "FirstName8",
@@ -367,11 +378,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName8",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6e662e28-cc0a-4f76-a21b-8726c7f4a1b1"),
+                            Id = new Guid("d2ec49bd-f61b-469a-8f73-d9c29547d784"),
                             Age = "10",
                             Email = "Email9@gmail.com",
                             FirstName = "FirstName9",
@@ -379,11 +391,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName9",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("53d2230c-5aaf-4fc7-902b-7e0e012210b4"),
+                            Id = new Guid("b0a88f99-f078-420d-870f-7859e9baae19"),
                             Age = "10",
                             Email = "Email10@gmail.com",
                             FirstName = "FirstName10",
@@ -391,11 +404,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName10",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("c47535ed-5ff0-400f-ad8e-ac7c52a4878e"),
+                            Id = new Guid("ef340ead-fe45-4215-bcd8-104ad23b7042"),
                             Age = "10",
                             Email = "Email11@gmail.com",
                             FirstName = "FirstName11",
@@ -403,11 +417,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName11",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("e83993ec-66a1-432e-b2d4-bcdb5f21d2aa"),
+                            Id = new Guid("24d6008e-8748-4c1f-9143-c3e0f66e7977"),
                             Age = "10",
                             Email = "Email12@gmail.com",
                             FirstName = "FirstName12",
@@ -415,11 +430,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName12",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("ccced808-c6dc-4913-8656-57f2b0b56a04"),
+                            Id = new Guid("edfc5505-3719-4ada-98fa-81aacad55227"),
                             Age = "10",
                             Email = "Email13@gmail.com",
                             FirstName = "FirstName13",
@@ -427,11 +443,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName13",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("c7fcce51-b173-43c6-b930-64a4576c77da"),
+                            Id = new Guid("05b4b294-854b-4ea2-b6a7-4a4ffdf147eb"),
                             Age = "10",
                             Email = "Email14@gmail.com",
                             FirstName = "FirstName14",
@@ -439,11 +456,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName14",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("14611601-11eb-447a-8273-6932807e3f55"),
+                            Id = new Guid("be3ca68b-5989-4274-b639-062f030333f6"),
                             Age = "10",
                             Email = "Email15@gmail.com",
                             FirstName = "FirstName15",
@@ -451,11 +469,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName15",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("21c239db-34a4-4572-9a7d-f6ea4ac314e5"),
+                            Id = new Guid("f8503dfa-ba00-48d7-8cdc-88e8f0d30b2f"),
                             Age = "10",
                             Email = "Email16@gmail.com",
                             FirstName = "FirstName16",
@@ -463,11 +482,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName16",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a8125c9b-04c6-427e-8a4a-fc1511016791"),
+                            Id = new Guid("96e9f7d7-fbc4-49bf-8916-1d2da5646bd4"),
                             Age = "10",
                             Email = "Email17@gmail.com",
                             FirstName = "FirstName17",
@@ -475,11 +495,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName17",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("4e6ed8d1-2f08-42c4-84c2-a0e627a2ed9d"),
+                            Id = new Guid("6f2fc807-063c-4946-859b-a41044d1aada"),
                             Age = "10",
                             Email = "Email18@gmail.com",
                             FirstName = "FirstName18",
@@ -487,11 +508,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName18",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("c33edd16-c00f-4f1a-81f1-2cefac6b8705"),
+                            Id = new Guid("95863ca0-ed86-45b1-a99b-43b821fe3260"),
                             Age = "10",
                             Email = "Email19@gmail.com",
                             FirstName = "FirstName19",
@@ -499,11 +521,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName19",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("d40b3b7d-d8e6-415b-a64f-f97fba8c3d4b"),
+                            Id = new Guid("072efd6b-f5be-4ae3-992b-f836b5d12221"),
                             Age = "10",
                             Email = "Email20@gmail.com",
                             FirstName = "FirstName20",
@@ -511,11 +534,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName20",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("75297f5d-f7ee-4a0d-9a73-a60bf1891469"),
+                            Id = new Guid("30829326-5aa4-4a94-aaf3-af6546467df1"),
                             Age = "10",
                             Email = "Email21@gmail.com",
                             FirstName = "FirstName21",
@@ -523,11 +547,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName21",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("fed1230f-a991-4f42-8bef-df161bfb583b"),
+                            Id = new Guid("b5cc6016-eee4-400c-be6b-a7bd98ce3e1a"),
                             Age = "10",
                             Email = "Email22@gmail.com",
                             FirstName = "FirstName22",
@@ -535,11 +560,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName22",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("7a66c250-05db-40d2-8cee-816742362492"),
+                            Id = new Guid("042203ba-9018-44c7-b3b1-e0d2094c6cfa"),
                             Age = "10",
                             Email = "Email23@gmail.com",
                             FirstName = "FirstName23",
@@ -547,11 +573,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName23",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("4242b469-efee-4af4-b58c-40b68e937b8c"),
+                            Id = new Guid("26c4ad96-855f-4550-8c73-d773fda6a57c"),
                             Age = "10",
                             Email = "Email24@gmail.com",
                             FirstName = "FirstName24",
@@ -559,11 +586,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName24",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("7c501657-1692-4d3a-8a8e-c01eb599279e"),
+                            Id = new Guid("3cc8798a-1667-4c44-876f-fe3e54ddacc1"),
                             Age = "10",
                             Email = "Email25@gmail.com",
                             FirstName = "FirstName25",
@@ -571,11 +599,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName25",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("4b2caddf-ce08-4207-a207-bbac670b06c4"),
+                            Id = new Guid("72476895-ef20-432e-9209-51c6032c0f33"),
                             Age = "10",
                             Email = "Email26@gmail.com",
                             FirstName = "FirstName26",
@@ -583,11 +612,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName26",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("dd1857ac-b3bf-4814-ac1c-a5fc457e3406"),
+                            Id = new Guid("9accaed1-f459-427f-8e9b-2e0db21b161f"),
                             Age = "10",
                             Email = "Email27@gmail.com",
                             FirstName = "FirstName27",
@@ -595,11 +625,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName27",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("5cd0fe01-3ecf-4732-a41c-04dd5e01ec3f"),
+                            Id = new Guid("070c36fc-54ce-4457-95dd-72c59dc60445"),
                             Age = "10",
                             Email = "Email28@gmail.com",
                             FirstName = "FirstName28",
@@ -607,11 +638,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName28",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("f094f405-eaee-4f16-a577-dd71eba26c8d"),
+                            Id = new Guid("e373cf44-46aa-4541-b3be-210651c60e5a"),
                             Age = "10",
                             Email = "Email29@gmail.com",
                             FirstName = "FirstName29",
@@ -619,11 +651,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName29",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("858d2ed8-d9b7-4e09-8fb8-22ec59aed89d"),
+                            Id = new Guid("8cb1dee2-23ca-4470-aae4-d66c752bfbf5"),
                             Age = "10",
                             Email = "Email30@gmail.com",
                             FirstName = "FirstName30",
@@ -631,11 +664,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName30",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("2e13d328-6ea8-4ca4-ae2b-6d7ec0999025"),
+                            Id = new Guid("134d6c74-a3bc-46cf-ac57-fce337aa30ed"),
                             Age = "10",
                             Email = "Email31@gmail.com",
                             FirstName = "FirstName31",
@@ -643,11 +677,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName31",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("3b56f7da-8e6c-4b89-ab80-d098c6c79ed8"),
+                            Id = new Guid("4a1eed2e-9273-4c2f-96a4-9f01eea8d6dd"),
                             Age = "10",
                             Email = "Email32@gmail.com",
                             FirstName = "FirstName32",
@@ -655,11 +690,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName32",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("7ee8f616-ff9b-40c2-b88a-d53384494a55"),
+                            Id = new Guid("bd4283f1-898a-42a7-bcb0-fd1cb6115811"),
                             Age = "10",
                             Email = "Email33@gmail.com",
                             FirstName = "FirstName33",
@@ -667,11 +703,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName33",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("190aeab4-8640-4e6c-8778-e7d0edb26197"),
+                            Id = new Guid("8a46df0e-a9c5-4e44-b1f5-a961265967d7"),
                             Age = "10",
                             Email = "Email34@gmail.com",
                             FirstName = "FirstName34",
@@ -679,11 +716,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName34",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("0b267c6b-b379-4a82-a3aa-531e11ace3e7"),
+                            Id = new Guid("157d1b73-27af-4899-b730-fe9c424a83b2"),
                             Age = "10",
                             Email = "Email35@gmail.com",
                             FirstName = "FirstName35",
@@ -691,11 +729,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName35",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6875605e-a2ae-44fb-a835-83b0a5634c86"),
+                            Id = new Guid("6b40573d-a9cd-4358-81ac-1f9af2e93476"),
                             Age = "10",
                             Email = "Email36@gmail.com",
                             FirstName = "FirstName36",
@@ -703,11 +742,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName36",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("45d376b5-959b-4ad1-a2ed-573c7d6c886e"),
+                            Id = new Guid("4f4995fc-358f-4e24-9597-f93c564b02ea"),
                             Age = "10",
                             Email = "Email37@gmail.com",
                             FirstName = "FirstName37",
@@ -715,11 +755,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName37",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("061c6888-7952-4379-b7bc-3b7668c05bc3"),
+                            Id = new Guid("e7e7c400-9228-40e9-8aa8-104a7387582d"),
                             Age = "10",
                             Email = "Email38@gmail.com",
                             FirstName = "FirstName38",
@@ -727,11 +768,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName38",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("8bd30bbd-01ad-4ae8-855e-e8cbdb7ef041"),
+                            Id = new Guid("0a7aaa51-1033-489c-a169-492f8c80f3ba"),
                             Age = "10",
                             Email = "Email39@gmail.com",
                             FirstName = "FirstName39",
@@ -739,11 +781,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName39",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("822ecad4-e377-4966-b096-1e9fa507b3c9"),
+                            Id = new Guid("54cd683c-6076-4a36-b892-b7c4d91ffe80"),
                             Age = "10",
                             Email = "Email40@gmail.com",
                             FirstName = "FirstName40",
@@ -751,11 +794,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName40",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("3f86dfbe-9ea4-4caa-bd4f-eec10d02e3df"),
+                            Id = new Guid("f1e206fd-a841-4172-9b59-aad6663da6c9"),
                             Age = "10",
                             Email = "Email41@gmail.com",
                             FirstName = "FirstName41",
@@ -763,11 +807,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName41",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6f4f54ed-0422-41a1-92e0-1010c26d795f"),
+                            Id = new Guid("dd8c0cac-cbaa-4004-b761-8e223d5f2795"),
                             Age = "10",
                             Email = "Email42@gmail.com",
                             FirstName = "FirstName42",
@@ -775,11 +820,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName42",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("45f63a34-73e5-4682-9f49-e4e1fadb97ad"),
+                            Id = new Guid("7a0a1a23-fb0a-4cba-9f8d-e93cbbeb234f"),
                             Age = "10",
                             Email = "Email43@gmail.com",
                             FirstName = "FirstName43",
@@ -787,11 +833,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName43",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("7eafcf33-c2fb-4eb0-b9c8-adb7140b4b7e"),
+                            Id = new Guid("130d1b0b-1b06-4fff-a8c8-96386176b908"),
                             Age = "10",
                             Email = "Email44@gmail.com",
                             FirstName = "FirstName44",
@@ -799,11 +846,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName44",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("16e07584-9f08-4956-b050-f8cda1b76ca8"),
+                            Id = new Guid("b2d19002-b1c7-4e8d-9718-a0b04340096c"),
                             Age = "10",
                             Email = "Email45@gmail.com",
                             FirstName = "FirstName45",
@@ -811,11 +859,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName45",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("8cee8082-aa56-4598-9b5b-386364aa4464"),
+                            Id = new Guid("e7753cec-b730-40b2-ba7d-a099c2bf6c8b"),
                             Age = "10",
                             Email = "Email46@gmail.com",
                             FirstName = "FirstName46",
@@ -823,11 +872,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName46",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("e69869db-1807-414d-9e33-eda2420f73a9"),
+                            Id = new Guid("ec1449cc-b75f-4e63-b037-e6f9e155224a"),
                             Age = "10",
                             Email = "Email47@gmail.com",
                             FirstName = "FirstName47",
@@ -835,11 +885,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName47",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a05a4a23-64f0-493d-a938-1099490a1ae0"),
+                            Id = new Guid("53508434-c4d2-4e56-a9b9-fd0564b3e453"),
                             Age = "10",
                             Email = "Email48@gmail.com",
                             FirstName = "FirstName48",
@@ -847,11 +898,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName48",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("44451ff2-1c98-4953-a478-81022c4391d8"),
+                            Id = new Guid("8bfbb3bc-bf0a-41c9-8040-fe5cee93d6bf"),
                             Age = "10",
                             Email = "Email49@gmail.com",
                             FirstName = "FirstName49",
@@ -859,11 +911,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName49",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("9502b291-e1db-4fcf-891a-3897bf9c7280"),
+                            Id = new Guid("073fbb0c-5afa-4f88-bb75-2f8b3bfeb311"),
                             Age = "10",
                             Email = "Email50@gmail.com",
                             FirstName = "FirstName50",
@@ -871,11 +924,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName50",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("1a376da1-8f9b-4d82-8b87-98df635dfc31"),
+                            Id = new Guid("080acfd4-9961-4167-ad99-885698b36e40"),
                             Age = "10",
                             Email = "Email51@gmail.com",
                             FirstName = "FirstName51",
@@ -883,11 +937,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName51",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("ae63b5c4-0147-4fd7-942f-bfd64f237ea0"),
+                            Id = new Guid("43325b97-6cc5-410f-8b41-85b9b07fdfb2"),
                             Age = "10",
                             Email = "Email52@gmail.com",
                             FirstName = "FirstName52",
@@ -895,11 +950,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName52",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("15498b79-1d21-4b2e-b934-2f15799d617d"),
+                            Id = new Guid("43db97af-cd59-4353-a416-00e5da49f7d5"),
                             Age = "10",
                             Email = "Email53@gmail.com",
                             FirstName = "FirstName53",
@@ -907,11 +963,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName53",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("fe506f17-f7df-483d-9dfc-e55fd2b3b5ce"),
+                            Id = new Guid("eaf09a1d-63de-4924-92c4-ff1723831bbc"),
                             Age = "10",
                             Email = "Email54@gmail.com",
                             FirstName = "FirstName54",
@@ -919,11 +976,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName54",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("3b2ba58f-513e-470f-a5fc-4e326c33269b"),
+                            Id = new Guid("6e909780-4d15-4340-ba33-f9eb187a9fb3"),
                             Age = "10",
                             Email = "Email55@gmail.com",
                             FirstName = "FirstName55",
@@ -931,11 +989,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName55",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("8aaf53fa-0bbb-42a5-af05-2ce5b5336e20"),
+                            Id = new Guid("028e45ba-9c73-4209-9b5a-8a267a699a92"),
                             Age = "10",
                             Email = "Email56@gmail.com",
                             FirstName = "FirstName56",
@@ -943,11 +1002,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName56",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("e574bff2-6798-44dc-abfe-7495d1889743"),
+                            Id = new Guid("f414eed1-a2a8-48aa-bf88-4fffe76742d6"),
                             Age = "10",
                             Email = "Email57@gmail.com",
                             FirstName = "FirstName57",
@@ -955,11 +1015,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName57",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a60229aa-e52c-4c17-a635-ea9d752fe3c8"),
+                            Id = new Guid("acba4426-c036-4bc9-b188-ac114d7094fd"),
                             Age = "10",
                             Email = "Email58@gmail.com",
                             FirstName = "FirstName58",
@@ -967,11 +1028,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName58",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("844139ff-c5e6-4d0a-a27f-e234130c3088"),
+                            Id = new Guid("684aa4a3-9039-48f3-bd15-abaa8b2c38ff"),
                             Age = "10",
                             Email = "Email59@gmail.com",
                             FirstName = "FirstName59",
@@ -979,11 +1041,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName59",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("e431ba35-7b1a-4ab3-b829-c15e5c0c0db3"),
+                            Id = new Guid("a0f38c43-f808-40fa-96c2-e765fea61a08"),
                             Age = "10",
                             Email = "Email60@gmail.com",
                             FirstName = "FirstName60",
@@ -991,11 +1054,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName60",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("44668531-2374-4745-a751-67cfbe178df5"),
+                            Id = new Guid("408b1580-a86b-474d-9b6a-3fc151d99351"),
                             Age = "10",
                             Email = "Email61@gmail.com",
                             FirstName = "FirstName61",
@@ -1003,11 +1067,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName61",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("1bc319bf-9374-4b5e-9c2d-8f6266b9c358"),
+                            Id = new Guid("67a55c6b-0bdd-48ef-ba2e-76cac07585e9"),
                             Age = "10",
                             Email = "Email62@gmail.com",
                             FirstName = "FirstName62",
@@ -1015,11 +1080,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName62",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a850ced0-87db-46b2-b622-50a085aa67d4"),
+                            Id = new Guid("67dbbaaa-bbd2-4d5d-87ee-89b00190ea3f"),
                             Age = "10",
                             Email = "Email63@gmail.com",
                             FirstName = "FirstName63",
@@ -1027,11 +1093,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName63",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a63258bc-53cd-4c91-a2f2-bdf6132aa5e2"),
+                            Id = new Guid("81990843-7bb2-4f94-9cf9-89ee72be7a53"),
                             Age = "10",
                             Email = "Email64@gmail.com",
                             FirstName = "FirstName64",
@@ -1039,11 +1106,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName64",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("1282bec6-f443-4993-b9f9-01dc91df5013"),
+                            Id = new Guid("ab76dc5e-73c2-4626-8fc4-1d2847c5d793"),
                             Age = "10",
                             Email = "Email65@gmail.com",
                             FirstName = "FirstName65",
@@ -1051,11 +1119,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName65",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("66a02296-e65a-47a4-be68-6982c902e476"),
+                            Id = new Guid("d3f0ca8a-c662-4842-a310-d71d11d5b25a"),
                             Age = "10",
                             Email = "Email66@gmail.com",
                             FirstName = "FirstName66",
@@ -1063,11 +1132,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName66",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("ce63cbff-6dba-49d5-b6d3-b252f7b673e2"),
+                            Id = new Guid("cf79b003-bd3c-4dab-b4f6-5b5010e68334"),
                             Age = "10",
                             Email = "Email67@gmail.com",
                             FirstName = "FirstName67",
@@ -1075,11 +1145,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName67",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6107e8b3-6bed-4a77-b8f3-2056cdae27d3"),
+                            Id = new Guid("1a11594f-8a31-4ba8-b6bf-9a31a10628ad"),
                             Age = "10",
                             Email = "Email68@gmail.com",
                             FirstName = "FirstName68",
@@ -1087,11 +1158,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName68",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("f77c8bd5-d54f-4e9b-b1f4-d0517d459330"),
+                            Id = new Guid("f1c203b8-ff75-409a-8676-89424233f8ac"),
                             Age = "10",
                             Email = "Email69@gmail.com",
                             FirstName = "FirstName69",
@@ -1099,11 +1171,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName69",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("1a1d4eac-e2cb-4224-82ac-0193eec24a65"),
+                            Id = new Guid("5618e671-221f-4118-8cd1-82ed9d009076"),
                             Age = "10",
                             Email = "Email70@gmail.com",
                             FirstName = "FirstName70",
@@ -1111,11 +1184,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName70",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("66783921-ecb6-45c1-9885-e7d1515243e9"),
+                            Id = new Guid("11860f0e-25fb-464f-bed2-ba6048f772db"),
                             Age = "10",
                             Email = "Email71@gmail.com",
                             FirstName = "FirstName71",
@@ -1123,11 +1197,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName71",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("16227367-eeeb-4433-a5cd-3b867b7d9f82"),
+                            Id = new Guid("1a1f2d04-f8c2-4139-b6e7-4954ddc9bc12"),
                             Age = "10",
                             Email = "Email72@gmail.com",
                             FirstName = "FirstName72",
@@ -1135,11 +1210,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName72",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6a4413cc-4240-4a81-a640-0fab36b4e0d9"),
+                            Id = new Guid("afd496f8-bf08-4524-bd90-743b62219606"),
                             Age = "10",
                             Email = "Email73@gmail.com",
                             FirstName = "FirstName73",
@@ -1147,11 +1223,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName73",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("d6e68a23-904c-4268-92bc-4729bfee226c"),
+                            Id = new Guid("33ec6a29-7a9b-4bab-ab1f-7ee8cca5ea6f"),
                             Age = "10",
                             Email = "Email74@gmail.com",
                             FirstName = "FirstName74",
@@ -1159,11 +1236,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName74",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("eac0cc0a-4c93-4ee6-b569-cabee380a9ea"),
+                            Id = new Guid("1d356843-478d-4165-a2ba-d74b2dea5e11"),
                             Age = "10",
                             Email = "Email75@gmail.com",
                             FirstName = "FirstName75",
@@ -1171,11 +1249,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName75",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("173b5ec0-4d04-4e05-a03e-395ef32c863c"),
+                            Id = new Guid("23a756ba-76c6-49c1-991b-e216ee0487e8"),
                             Age = "10",
                             Email = "Email76@gmail.com",
                             FirstName = "FirstName76",
@@ -1183,11 +1262,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName76",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("83c3f2ae-e41f-4295-82c5-11d5530cc4cb"),
+                            Id = new Guid("3e331450-7f98-4d34-bdac-fe7b05b6dc13"),
                             Age = "10",
                             Email = "Email77@gmail.com",
                             FirstName = "FirstName77",
@@ -1195,11 +1275,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName77",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("85605a83-caff-473e-8545-59927a59f2ac"),
+                            Id = new Guid("bba156f4-1fc1-4830-b92a-846f2af6fa0d"),
                             Age = "10",
                             Email = "Email78@gmail.com",
                             FirstName = "FirstName78",
@@ -1207,11 +1288,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName78",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("38b069da-a8fe-48e8-98a4-505a17b3a2be"),
+                            Id = new Guid("be33735f-94dc-4050-8e0b-e9d78354b8d2"),
                             Age = "10",
                             Email = "Email79@gmail.com",
                             FirstName = "FirstName79",
@@ -1219,11 +1301,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName79",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("fc2b0a34-07ef-4ed6-b7ed-4a3cb8842000"),
+                            Id = new Guid("f6987580-4707-4ce4-8fe9-9bb4fada8f2b"),
                             Age = "10",
                             Email = "Email80@gmail.com",
                             FirstName = "FirstName80",
@@ -1231,11 +1314,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName80",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("37772cad-2a9c-4be5-b192-61d3c43ed030"),
+                            Id = new Guid("553aff4e-c7cc-4912-9124-c0eebfd3ba35"),
                             Age = "10",
                             Email = "Email81@gmail.com",
                             FirstName = "FirstName81",
@@ -1243,11 +1327,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName81",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a052e60d-a6aa-40ce-b004-dbebd6382207"),
+                            Id = new Guid("516cd00d-c972-4baa-81dc-341a0f0b68a6"),
                             Age = "10",
                             Email = "Email82@gmail.com",
                             FirstName = "FirstName82",
@@ -1255,11 +1340,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName82",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("a50137be-d4d4-4b0a-b521-b27b0813e674"),
+                            Id = new Guid("29b13c14-7d5c-400c-9695-06abec38c3ea"),
                             Age = "10",
                             Email = "Email83@gmail.com",
                             FirstName = "FirstName83",
@@ -1267,11 +1353,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName83",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("2da1c460-2643-40d4-9563-d6877aa1b18a"),
+                            Id = new Guid("346198f5-1197-42f7-b59a-d254fc8413c1"),
                             Age = "10",
                             Email = "Email84@gmail.com",
                             FirstName = "FirstName84",
@@ -1279,11 +1366,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName84",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("f9846f9f-bda5-40b4-90f2-5da788f02efd"),
+                            Id = new Guid("783dacaa-a034-46bc-a9d1-84a323d03073"),
                             Age = "10",
                             Email = "Email85@gmail.com",
                             FirstName = "FirstName85",
@@ -1291,11 +1379,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName85",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("13ef5819-5497-44f2-bd2b-4355082ce490"),
+                            Id = new Guid("a9f7b272-5047-465e-abe4-4a4828c1a255"),
                             Age = "10",
                             Email = "Email86@gmail.com",
                             FirstName = "FirstName86",
@@ -1303,11 +1392,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName86",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("78e66e1b-bdd3-403c-98d8-bb0a19962ae0"),
+                            Id = new Guid("b16e08ab-75cc-45ff-b3ef-f1f93db2765e"),
                             Age = "10",
                             Email = "Email87@gmail.com",
                             FirstName = "FirstName87",
@@ -1315,11 +1405,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName87",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("0aab7377-fd8f-441c-80b0-52fe283f057b"),
+                            Id = new Guid("253b4566-24a3-4ca4-a7c2-27435701fec6"),
                             Age = "10",
                             Email = "Email88@gmail.com",
                             FirstName = "FirstName88",
@@ -1327,11 +1418,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName88",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("ae1b1245-d862-4f88-a73e-1287e55540f9"),
+                            Id = new Guid("d5850422-fb62-48df-b2d2-1977ffea6a17"),
                             Age = "10",
                             Email = "Email89@gmail.com",
                             FirstName = "FirstName89",
@@ -1339,11 +1431,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName89",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("fd55808d-5748-4752-967c-2e5b12cda145"),
+                            Id = new Guid("fd540831-2104-4c7c-af87-1aea85e52351"),
                             Age = "10",
                             Email = "Email90@gmail.com",
                             FirstName = "FirstName90",
@@ -1351,11 +1444,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName90",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("1a07b508-6791-4feb-9e2d-47588f29d6fa"),
+                            Id = new Guid("087594b1-e612-4b59-a160-0e60b8d65128"),
                             Age = "10",
                             Email = "Email91@gmail.com",
                             FirstName = "FirstName91",
@@ -1363,11 +1457,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName91",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("4a0b6126-9594-48a4-bab9-a8a9b933834f"),
+                            Id = new Guid("4cc4bd2a-892e-4768-b0b7-35a0a0849e5d"),
                             Age = "10",
                             Email = "Email92@gmail.com",
                             FirstName = "FirstName92",
@@ -1375,11 +1470,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName92",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("dbb41c89-bdf3-4401-a87c-82bb61924518"),
+                            Id = new Guid("b3310277-fe2e-4084-b914-bca6fa84e786"),
                             Age = "10",
                             Email = "Email93@gmail.com",
                             FirstName = "FirstName93",
@@ -1387,11 +1483,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName93",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("3f3f3b02-35df-4d00-b829-8f8022ebc262"),
+                            Id = new Guid("3905cc17-7ff8-4b4f-962c-b91742b3c095"),
                             Age = "10",
                             Email = "Email94@gmail.com",
                             FirstName = "FirstName94",
@@ -1399,11 +1496,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName94",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("8f1a54ea-a362-44c1-a6b6-36a1dfe96648"),
+                            Id = new Guid("806277d5-6ab4-4d33-86f2-94c54a3cac4b"),
                             Age = "10",
                             Email = "Email95@gmail.com",
                             FirstName = "FirstName95",
@@ -1411,11 +1509,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName95",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("930289ac-2f3b-42b0-87ab-d45fd1630581"),
+                            Id = new Guid("af2dacb0-9860-4a50-a19f-d90eaf46c406"),
                             Age = "10",
                             Email = "Email96@gmail.com",
                             FirstName = "FirstName96",
@@ -1423,11 +1522,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName96",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("308eba7b-f122-4303-9ca2-461c165d42ca"),
+                            Id = new Guid("a62970a6-58c7-4b0a-bba0-a8a55b013e26"),
                             Age = "10",
                             Email = "Email97@gmail.com",
                             FirstName = "FirstName97",
@@ -1435,11 +1535,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName97",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("bd448ac4-ed1e-4939-bd20-80dedd020f75"),
+                            Id = new Guid("e35b72b2-d5a6-49e5-b24b-bd33344b3371"),
                             Age = "10",
                             Email = "Email98@gmail.com",
                             FirstName = "FirstName98",
@@ -1447,11 +1548,12 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName98",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         },
                         new
                         {
-                            Id = new Guid("6d347c29-f7dd-491d-83c0-d511e615d754"),
+                            Id = new Guid("0dcb00b5-be6c-4021-bbfd-4d9b8c69d092"),
                             Age = "10",
                             Email = "Email99@gmail.com",
                             FirstName = "FirstName99",
@@ -1459,7 +1561,8 @@ namespace DOTNET_hocmienphi.repository.Migrations
                             LastName = "LastName99",
                             Password = "123123",
                             Phone = "123123",
-                            Role = "Student"
+                            Role = "Student",
+                            SendDate = new DateOnly(1, 1, 1)
                         });
                 });
 
